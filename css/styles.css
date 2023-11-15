@@ -1,7 +1,15 @@
-#title {
-	background-color: #ff4c68;
-	color: white;
+:root {
+	--primary: #0c356a;
+	--primary-light: #425d81;
+	--secondary: #ff6c22;
+	--secondary-hover: #b55220;
 }
+
+#title {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -9,10 +17,12 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 .button-secondary {
-	background-color: #ff4c68;
+	background-color: var(--secondary);
+	color: white;
 }
 .button-secondary:hover {
-	background-color: #b33c4e;
+	color: white;
+	background-color: var(--secondary-hover);
 }
 
 h1 {
@@ -63,10 +73,17 @@ body {
 }
 .download-button {
 	margin: 5% 0;
+	background: var(--secondary);
+	color: white;
 }
+.download-button:hover {
+	background-color: var(--secondary);
+	color: white;
+	box-shadow: black 4px 1px 13px -1px;
+}
+
 .title-img {
 	width: 100%;
-	/* transform: rotate(25deg); */
 	position: relative;
 	z-index: 1;
 }
@@ -81,7 +98,7 @@ p {
 	color: #8f8f8f;
 }
 .icon:hover {
-	color: #ff4c68;
+	color: var(--secondary);
 }
 #features {
 	padding: 8% 15%;
@@ -101,7 +118,7 @@ p {
 }
 
 #press {
-	background-color: #ef8172;
+	background-color: var(--primary-light);
 	text-align: center;
 	padding-bottom: 15px;
 }
@@ -124,8 +141,8 @@ p {
 }
 
 #cta {
+	background-color: var(--primary);
 	padding: 9% 15%;
-	background-color: #ff4c68;
 	text-align: center;
 }
 
@@ -158,7 +175,6 @@ p {
 
 	.title-img {
 		position: static;
-		transform: rotate(15deg);
 		width: 50%;
 		margin-top: 15px;
 		margin-bottom: 180px;
