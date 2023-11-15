@@ -14,8 +14,7 @@ Dating site for our beloved pets.
 
 ## Preview
 
-![image](https://github.com/warmachine028/AutoInsights/assets/75939390/82d6a4f3-cb18-420a-87e9-c4a80201e096)
-
+![preview](https://github.com/warmachine028/AutoInsights/assets/75939390/3660c5a3-30e6-4064-b5b5-f7ca41b17cb0)
 
 ## Contributors
 
