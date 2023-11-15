@@ -2,6 +2,18 @@
 	background-color: #ff4c68;
 	color: white;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.button-secondary {
+	background-color: #ff4c68;
+}
+.button-secondary:hover {
+	background-color: #b33c4e;
+}
 
 h1 {
 	font-family: "Montserrat", sans-serif;
@@ -17,17 +29,29 @@ h2 {
 	padding: 5%;
 	padding-bottom: 0;
 }
+
 .container-fluid {
 	padding: 3% 15%;
 }
 body {
 	font-family: "Montserrat", sans-serif;
 }
+
 /*Navigation bar*/
+.navbar-brand img {
+	border-radius: 10px;
+	width: 206px;
+	padding: 7px;
+	background-color: #f8f8f8;
+}
+.navbar-brand img:hover {
+	box-shadow: black 4px 1px 13px -1px;
+}
 .navbar-brand {
 	font-family: "Ubuntu", sans-serif;
 	font-size: 2.5rem;
 	font-weight: bold;
+	padding: 10px;
 }
 .navbar {
 	padding: 0 0 4.5rem;
@@ -38,7 +62,7 @@ body {
 	font-size: 1.5rem;
 }
 .download-button {
-	margin: 5% 3% 5% 3%;
+	margin: 5% 0;
 }
 .title-img {
 	width: 100%;
@@ -127,7 +151,6 @@ p {
 	padding: 0.6%;
 	padding-bottom: 2%;
 }
-
 @media (max-width: 1028px) {
 	#title {
 		text-align: center;
