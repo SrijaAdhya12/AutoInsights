@@ -1,0 +1,201 @@
+:root {
+	--primary: #0c356a;
+	--primary-light: #425d81;
+	--secondary: #ff6c22;
+	--secondary-hover: #b55220;
+}
+
+#title {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.button-secondary {
+	background-color: var(--secondary);
+	color: white;
+}
+.button-secondary:hover {
+	color: white;
+	background-color: var(--secondary-hover);
+}
+
+h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 3.5rem;
+	line-height: 1.5;
+}
+h2 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: #fff;
+	font-size: 2.5rem;
+	line-height: 1.5;
+	padding: 5%;
+	padding-bottom: 0;
+}
+
+.container-fluid {
+	padding: 3% 15%;
+}
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+/*Navigation bar*/
+.navbar-brand img {
+	border-radius: 10px;
+	width: 206px;
+	padding: 7px;
+	background-color: #f8f8f8;
+}
+.navbar-brand img:hover {
+	box-shadow: black 4px 1px 13px -1px;
+}
+.navbar-brand {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding: 10px;
+}
+.navbar {
+	padding: 0 0 4.5rem;
+}
+.nav-item {
+	padding: 0 18px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.5rem;
+}
+.download-button {
+	margin: 5% 0;
+	background: var(--secondary);
+	color: white;
+}
+.download-button:hover {
+	background-color: var(--secondary);
+	color: white;
+	box-shadow: black 4px 1px 13px -1px;
+}
+
+.title-img {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+/*features*/
+h3 {
+	font-family: "Montserrat-bold", sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+p {
+	color: #8f8f8f;
+}
+.icon:hover {
+	color: var(--secondary);
+}
+#features {
+	padding: 8% 15%;
+	background-color: white;
+	position: relative;
+	z-index: 1;
+}
+.feature-box {
+	padding: 5%;
+	text-align: center;
+}
+
+.testimonials-img {
+	width: 10%;
+	border-radius: 100%;
+	margin: 20px;
+}
+
+#press {
+	background-color: var(--primary-light);
+	text-align: center;
+	padding-bottom: 15px;
+}
+.press-img {
+	width: 15%;
+	margin: 20px 20px 50px;
+}
+.carousel-inner {
+	padding: 3% 15%;
+	text-align: center;
+	background-color: #ef8172;
+}
+.signup-button {
+	border-color: var(--secondary);
+	color: var(--secondary);
+	width: 400px;
+}
+
+.signup-button:hover {
+	border-color: var(--secondary);
+	background-color: var(--secondary);
+	color: white;
+}
+#pricing {
+	padding: 100px;
+	text-align: center;
+}
+.pricing-table {
+	padding: 3% 2%;
+}
+
+#cta {
+	background-color: var(--primary);
+	padding: 9% 15%;
+	text-align: center;
+}
+
+.ctah3 {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-size: 3rem;
+	line-height: 1.5;
+}
+
+.cta-button {
+	margin: 10px;
+	margin-top: 60px;
+}
+
+#footer {
+	padding: 6% 15%;
+	text-align: center;
+	background-color: #fff;
+}
+
+.social {
+	padding: 0.6%;
+	padding-bottom: 2%;
+}
+@media (max-width: 1028px) {
+	#title {
+		text-align: center;
+	}
+
+	.title-img {
+		position: static;
+		width: 50%;
+		margin-top: 15px;
+		margin-bottom: 180px;
+	}
+}
+
+@media (max-width: 500px) {
+	#pricing {
+		padding: 0 40px;
+	}
+	.signup-button {
+		width: 100%;
+	}
+}
