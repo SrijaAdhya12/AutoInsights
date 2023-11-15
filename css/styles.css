@@ -131,7 +131,17 @@ p {
 	text-align: center;
 	background-color: #ef8172;
 }
+.signup-button {
+	border-color: var(--secondary);
+	color: var(--secondary);
+	width: 400px;
+}
 
+.signup-button:hover {
+	border-color: var(--secondary);
+	background-color: var(--secondary);
+	color: white;
+}
 #pricing {
 	padding: 100px;
 	text-align: center;
@@ -184,5 +194,8 @@ p {
 @media (max-width: 500px) {
 	#pricing {
 		padding: 0 40px;
+	}
+	.signup-button {
+		width: 100%;
 	}
 }
