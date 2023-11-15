@@ -1,6 +1,6 @@
 # AutoInsights
 
-Dating site for our beloved pets.
+Car suggesting website
 
 ## Tech Stack
 
