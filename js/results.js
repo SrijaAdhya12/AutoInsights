@@ -19,7 +19,8 @@ function display(cars) {
 	cars.forEach((car) => {
 		const card = document.createElement('div')
 		card.style.width = '18rem'
-		card.classList.add('card')
+		card.style.height = '286px'
+		card.classList.add('card shadow-lg p-3')
 		// Return the item at the random index
 		const image = images[Math.floor(Math.random() * images.length)]
 		const cardContent = `
