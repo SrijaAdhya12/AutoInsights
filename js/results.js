@@ -19,12 +19,14 @@ function display(cars) {
 	cars.forEach((car) => {
 		const card = document.createElement('div')
 		card.style.width = '18rem'
-		card.style.height = '286px'
-		card.classList.add('card shadow-lg p-3')
+		card.style.height = '400px'
+		card.classList.add('card')
+		// card.classList.add('p-3')
+		card.classList.add('shadow-lg')
 		// Return the item at the random index
 		const image = images[Math.floor(Math.random() * images.length)]
 		const cardContent = `
-			<img src=${image} class="card-img-top" alt="car" />
+			<img src=${image} class="card-img-top" alt="car" style="height: 161px; object-fit: cover;" />
 			<div class="card-body">
 				<h5 class="card-title">${car.Make} ${car.Model}</h5>
 				<p class="card-text">HorsePower: ${car.Horsepower}</p>
