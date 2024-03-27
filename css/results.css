@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root {
+	--primary: #EEEEEE;
+	--primary-light: #425d81;
+	--secondary: #ff6c22;
+	--secondary-hover: #b55220;
+}
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.container-fluid {
+	padding: 3% 15%;
+}
+
+
+/*Navbar*/
+
+.navbar-brand img {
+	border-radius: 10px;
+	width: 206px;
+	padding: 7px;
+	background-color: #f8f8f8;
+}
+.navbar-brand img:hover {
+	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
+}
+.navbar-brand {
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding: 10px;
+}
+.navbar {
+	padding: 0 0 2.0rem;
+}
+.nav-item {
+	padding: 0 18px;
+	font-size: 1.5rem;
+}
+.download-button {
+	margin: 5% 0;
+	background: var(--secondary);
+	color: white;
+}
+.download-button:hover {
+	background-color: var(--secondary);
+	color: white;
+	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
+}
+
+.title-img {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.navbar a {
+	color: var(--primary-light);
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.navbar a:hover {
+	color: var(--secondary);
+	transform: scale(1.2);
+}
+
+header {
+    background-color: var(--primary);
+}
+
+#hero {
+     background-color: var(--primary);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
