@@ -156,7 +156,6 @@ p {
 .carousel-inner {
 	padding: 3% 15%;
 	text-align: center;
-	background-color: #ef8172;
 }
 .signup-button {
 	border-color: var(--secondary);
