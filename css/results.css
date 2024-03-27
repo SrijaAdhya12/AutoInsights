@@ -85,3 +85,14 @@ header {
     align-items: center;
     margin: 100px 0 100px 0;
 }
+
+.card{
+	 /* box-shadow: 4px 4px 3px #80808047; */
+}
+
+.card:hover{
+	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
+	transform: scale(1.2);
+	transition: 0.5s ease-in-out;
+}
+
