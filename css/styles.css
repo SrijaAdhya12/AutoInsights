@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Monserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Inter */
 :root {
 	--primary: #0c356a;
 	--primary-light: #425d81;
@@ -5,11 +14,20 @@
 	--secondary-hover: #b55220;
 }
 
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+header {
+	background-color: var(--primary);
+}
+
 #title {
 	background-color: var(--primary);
 	color: var(--secondary);
 	height: 520px;
 }
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -27,12 +45,11 @@ input::-webkit-inner-spin-button {
 }
 
 h1 {
-	font-family: "Montserrat", sans-serif;
 	font-size: 3.5rem;
 	line-height: 1.5;
+	/* font-weight: ; */
 }
 h2 {
-	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	color: #fff;
 	font-size: 2.5rem;
@@ -44,11 +61,10 @@ h2 {
 .container-fluid {
 	padding: 3% 15%;
 }
-body {
-	font-family: "Montserrat", sans-serif;
-}
 
-/*Navigation bar*/
+
+/*Navbar*/
+
 .navbar-brand img {
 	border-radius: 10px;
 	width: 206px;
@@ -56,20 +72,18 @@ body {
 	background-color: #f8f8f8;
 }
 .navbar-brand img:hover {
-	box-shadow: black 4px 1px 13px -1px;
+	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
 }
 .navbar-brand {
-	font-family: "Ubuntu", sans-serif;
 	font-size: 2.5rem;
 	font-weight: bold;
 	padding: 10px;
 }
 .navbar {
-	padding: 0 0 4.5rem;
+	padding: 0 0 2.0rem;
 }
 .nav-item {
 	padding: 0 18px;
-	font-family: "Montserrat", sans-serif;
 	font-size: 1.5rem;
 }
 .download-button {
@@ -80,7 +94,7 @@ body {
 .download-button:hover {
 	background-color: var(--secondary);
 	color: white;
-	box-shadow: black 4px 1px 13px -1px;
+	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
 }
 
 .title-img {
@@ -89,10 +103,20 @@ body {
 	z-index: 1;
 }
 
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.navbar a:hover {
+	color: var(--secondary);
+	transform: scale(1.2);
+}
+
 /*features*/
 h3 {
-	font-family: "Montserrat-bold", sans-serif;
-	font-weight: bold;
+	font-weight: bolder;
 	font-size: 1.5rem;
 }
 p {
@@ -106,7 +130,6 @@ p {
 	background-color: white;
 	position: relative;
 	z-index: 1;
-	font-family: "Montserrat", sans-serif;
 }
 .feature-box {
 	padding: 5%;
@@ -154,9 +177,8 @@ p {
 	padding: 3% 2%;
 }
 
-.explore{
+.explore {
 	color: white;
-	font-family: "Montserrat", sans-serif;
 	font-size: 1.5rem;
 	margin-top: 5px;
 }
@@ -165,14 +187,14 @@ p {
 	background-color: var(--primary);
 	padding: 9% 15%;
 	text-align: center;
-}
 
+}
 
 .ctah3 {
 	color: white;
-	font-family: "Montserrat", sans-serif;
 	font-size: 3rem;
 	line-height: 1.5;
+	font-weight: bolder;
 }
 
 .cta-button {
@@ -190,9 +212,14 @@ p {
 	padding: 0.6%;
 	padding-bottom: 2%;
 }
+
 @media (max-width: 1028px) {
 	#title {
 		text-align: center;
+	}
+
+	#title form {
+		text-align: left;
 	}
 
 	.title-img {
@@ -202,8 +229,6 @@ p {
 		margin-bottom: 180px;
 	}
 }
-
-
 
 @media (max-width: 500px) {
 	#pricing {

@@ -5,6 +5,7 @@
 		<title>AutoInsights</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/images/icon.png" />
+
 		<!-- Bootstrap -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
@@ -12,8 +13,6 @@
 		<!--Fonts-->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
 
 		<!--icon-->
 		<script src="https://kit.fontawesome.com/6e94451bee.js" crossorigin="anonymous"></script>
@@ -24,15 +23,23 @@
 	</head>
 
 	<body>
-		<section id="title">
-			<div class="container-fluid">
-				<!-- Nav Bar -->
-				<nav class="navbar navbar-expand-lg navbar-dark">
+		<header class="container-fluid">
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-dark" style="display: flex; justify-content: space-between; align-items: center">
+				<div>
 					<a class="navbar-brand" href="/">
 						<img src="images/page logo.png" alt="icon" style="border-radius: 10px" width="250" />
 					</a>
-				</nav>
-
+				</div>
+				<div style="display: flex; gap: 75px; align-items: center; justify-content: center">
+					<a href="#">Home</a>
+					<a href="#features">Features</a>
+					<a href="#">Contact Us</a>
+				</div>
+			</nav>
+		</header>
+		<section id="title">
+			<div class="container-fluid">
 				<!-- Title -->
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
@@ -40,9 +47,7 @@
 							<span style="color: var(--secondary)"> Drive Data, Choose </span>
 							Wisely, Ride Smart.
 						</h3>
-						<button type="button" class="btn btn-lg download-button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-							<i class="fa-solid fa-magnifying-glass"></i> Find your right car
-						</button>
+						<button type="button" class="btn btn-lg download-button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="fa-solid fa-magnifying-glass"></i> Find your right car</button>
 
 						<!-- Modal -->
 						<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -54,56 +59,57 @@
 											<span aria-hidden="true">&times;</span>
 										</button>
 									</div>
-									<form>
+									<form onsubmit="suggestCars(event)">
 										<div class="modal-body">
 											<div class="mb-3">
 												<label for="engine" class="form-label text-black">Engine</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="engine" aria-describedby="basic-addon3 basic-addon4" placeholder="1.3-8.3" />
+													<input type="number" class="form-control" id="engine" aria-describedby="basic-addon3 basic-addon4" placeholder="1.3-8.3" min="1.3" step="0.1" max="8.3" />
 												</div>
 											</div>
 											<div class="mb-3">
 												<label for="cylinders" class="form-label text-black">Cylinders</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="cylinders" aria-describedby="basic-addon3 basic-addon4" placeholder="3-12" />
+													<input type="number" class="form-control" id="cylinders" aria-describedby="basic-addon3 basic-addon4" placeholder="3-12"  min="3" step="1" max="12"/>
 												</div>
 											</div>
 											<div class="mb-3">
 												<label for="horsepower" class="form-label text-black">Horsepower</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="horsepower" aria-describedby="basic-addon3 basic-addon4" placeholder="73-500" />
+													<input type="number" class="form-control" id="horsepower" aria-describedby="basic-addon3 basic-addon4" placeholder="73-500"  min="73" step="1" max="500"/>
 												</div>
 											</div>
 											<div class="mb-3">
-												<label for="mpg-city" class="form-label text-black">MPG_City</label>
+												<label for="mpg-city" class="form-label text-black">MPG City</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="mpg-city" aria-describedby="basic-addon3 basic-addon4" placeholder="10-60" />
+													<input type="number" class="form-control" id="mpg-city" aria-describedby="basic-addon3 basic-addon4" placeholder="10-60"  min="10" step="1" max="60"/>
 												</div>
 											</div>
 											<div class="mb-3">
-												<label for="mpg-highway" class="form-label text-black">MPG_Highway</label>
+												<label for="mpg-highway" class="form-label text-black">MPG Highway</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="mpg-highway" aria-describedby="basic-addon3 basic-addon4" placeholder="12-66" />
+													<input type="number" class="form-control" id="mpg-highway" aria-describedby="basic-addon3 basic-addon4" placeholder="12-66"  min="12" step="1" max="66"/>
 												</div>
 											</div>
 											<div class="mb-3">
 												<label for="weight" class="form-label text-black">Weight</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="weight" aria-describedby="basic-addon3 basic-addon4" placeholder="1850-7190" />
+													<input type="number" class="form-control" id="weight" aria-describedby="basic-addon3 basic-addon4" placeholder="1850-7190"  min="1850" step="1" max="7190"/>
 												</div>
 											</div>
 											<div class="mb-3">
 												<label for="wheelbase" class="form-label text-black">Wheelbase</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="wheelbase" aria-describedby="basic-addon3 basic-addon4" placeholder="89-144" />
+													<input type="number" class="form-control" id="wheelbase" aria-describedby="basic-addon3 basic-addon4" placeholder="89-144"  min="89" step="1" max="144"/>
 												</div>
 											</div>
 											<div class="mb-3">
 												<label for="length" class="form-label text-black">Length</label>
 												<div class="input-group">
-													<input type="number" class="form-control" id="length" aria-describedby="basic-addon3 basic-addon4" placeholder="143-238" />
+													<input type="number" class="form-control" id="length" aria-describedby="basic-addon3 basic-addon4" placeholder="143-238"  min="143" step="1" max="238"/>
 												</div>
 											</div>
+											<h6> *MPG stands for Miles Per Gallon</h6>
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -114,7 +120,7 @@
 							</div>
 						</div>
 					</div>
-					<div style="padding-left: 50px;"     class="col-lg-6 col-md-12 col-12">
+					<div style="padding-left: 50px" class="col-lg-6 col-md-12 col-12">
 						<img class="title-img" src="images/hero.png" alt="car-mockup" />
 					</div>
 				</div>
@@ -122,7 +128,6 @@
 		</section>
 
 		<!-- Features -->
-
 		<section id="features">
 			<div class="row">
 				<div class="col-lg-4 col-md-12 feature-box">
@@ -143,24 +148,18 @@
 			</div>
 		</section>
 
-
-
-
-
-
 		<!-- Press -->
-
 		<section id="press">
 			<img class="press-img" src="images/cherovelt_logo-removebg-preview (1).png" alt="tc-logo" />
 			<img class="press-img" src="images/ferarri-logo.png" alt="tnw-logo" />
 			<img class="press-img" src="images/aston_martin_logo.png" alt="biz-insider-logo" />
 			<img class="press-img" src="images/totoya logo.png" alt="mashable-logo" />
 		</section>
-		<!-- Pricing -->
 
+		<!-- Pricing -->
 		<section id="pricing">
 			<h2 style="color: black">Car hunting made easy</h2>
-			<p style="margin-bottom: 100px;">Because decoding vehicle data shouldn't require a detective hat!</p>
+			<p style="margin-bottom: 100px">Because decoding vehicle data shouldn't require a detective hat!</p>
 			<div class="container py-3">
 				<div class="row row-cols-1 row-cols-md-1 mb-3 text-center">
 					<div class="pricing-table col-lg-12 col-md-6">
@@ -186,7 +185,6 @@
 		</section>
 
 		<!-- Call to Action -->
-
 		<section id="cta">
 			<h3 class="ctah3">Navigate the car jungle with our website.</h3>
 		</section>
@@ -200,5 +198,6 @@
 
 			<p>© Copyright AutoInsights</p>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>
