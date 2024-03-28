@@ -40,9 +40,10 @@ function display(cars) {
 			<img src=${carImages[car.Make] || carImages['default']} class="card-img-top" alt="car" style="height: 161px; object-fit: cover;"/>
 			<div class="card-body">
 				<h5 class="card-title">${car.Make} ${car.Model}</h5>
-				<p class="card-text">HorsePower: ${car.Horsepower}</p>
-				<p class="card-text">Miles Per Gallon: ${car.MPG_City}</p>
-				<a href="#" class="btn btn-danger">Know More</a>
+				<p class="card-text">${car.EngineSize * 1000} Cc, ${car.Horsepower} Bhp, ${car.MPG_City} KM/L</p>
+				<h6> $ ${car.MSRP.slice(0, -2)} </h6>
+				<p style="font-size: 12px; color: grey;">Ex-Showroom Price</p>
+				<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button>
 			</div>
         `
 		card.innerHTML = cardContent
