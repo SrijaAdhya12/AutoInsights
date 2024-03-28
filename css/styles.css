@@ -126,7 +126,8 @@ p {
 	color: var(--secondary);
 }
 #features {
-	padding: 8% 15%;
+	padding: 6% 15%;
+	padding-bottom: 4%;
 	background-color: white;
 	position: relative;
 	z-index: 1;
@@ -135,6 +136,17 @@ p {
 	padding: 5%;
 	text-align: center;
 }
+
+/*features*/
+
+.carousel-item {
+	text-align: center;
+}
+
+#Gallery h1{
+	color: black;
+}
+
 
 .testimonials-img {
 	width: 10%;
@@ -238,4 +250,7 @@ p {
 	.signup-button {
 		width: 100%;
 	}
+}
+th, td {
+  padding: 15px;
 }

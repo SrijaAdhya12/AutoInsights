@@ -72,3 +72,5 @@ const filterCars = (cars, criteria) => {
 		return false // Return false if none of the properties match the criteria
 	})
 }
+
+

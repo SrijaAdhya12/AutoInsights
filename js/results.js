@@ -31,7 +31,7 @@ function display(cars) {
 				<h5 class="card-title">${car.Make} ${car.Model}</h5>
 				<p class="card-text">HorsePower: ${car.Horsepower}</p>
 				<p class="card-text">Miles Per Gallon: ${car.MPG_City}</p>
-				<a href="#" class="btn btn-danger">Go somewhere</a>
+				<a href="#" class="btn btn-danger">Know More</a>
 			</div>
         `
 		card.innerHTML = cardContent
