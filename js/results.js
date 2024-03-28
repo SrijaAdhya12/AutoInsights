@@ -4,8 +4,9 @@ const carImages = {
 	Audi: 'https://www.topgear.com/sites/default/files/2022/04/1-Audi-R8.jpg',
 	BMW: 'https://www.shutterstock.com/image-photo/montecarlo-monaco-17-september-2018-600nw-1181919463.jpg',
 	Buick: 'https://s1.cdn.autoevolution.com/images/news/gallery/1970-buick-gsx-in-saturn-yellow-should-really-light-your-fire_16.jpg',
+	Cadillac: 'https://c4.wallpaperflare.com/wallpaper/444/470/499/vehicle-cadillac-car-old-car-wallpaper-preview.jpg',
 	Chevrolet: 'https://variety.com/wp-content/uploads/2013/07/hr_transformers_4_12.jpg?w=1000&h=563&crop=1',
-	Chrysler: 'https://i.pinimg.com/564x/0a/b9/51/0ab951ace7cfb15298b5d32ee9e31815.jpg',
+	Chrysler: 'https://www.hdcarwallpapers.com/walls/chrysler_300c_2023_4k-HD.jpg',
 	Dodge: 'https://i0.wp.com/moparinsiders.com/wp-content/uploads/2023/03/DG012_068CL.jpeg?fit=2000%2C1125&ssl=1',
 	Ford: 'https://www.topgear.com/sites/default/files/cars-car/image/2018/03/mustang_lightning_blue_009.jpg',
 	GMC: 'https://inv.assets.ansira.net/RTT/GMC/2024/6129583/default/ext_GCP_deg01.jpg',
@@ -29,11 +30,14 @@ function display(cars) {
 	cars.forEach((car) => {
 		const card = document.createElement('div')
 		card.style.width = '18rem'
+		card.style.height = '400px'
 		card.classList.add('card')
+		// card.classList.add('p-3')
+		card.classList.add('shadow-lg')
 		// Return the item at the random index
 		console.log(carImages[car.Make])
 		const cardContent = `
-			<img src=${carImages[car.Make]|| carImages['default']} class="card-img-top" alt="car" />
+			<img src=${carImages[car.Make] || carImages['default']} class="card-img-top" alt="car" style="height: 161px; object-fit: cover;"/>
 			<div class="card-body">
 				<h5 class="card-title">${car.Make} ${car.Model}</h5>
 				<p class="card-text">HorsePower: ${car.Horsepower}</p>
