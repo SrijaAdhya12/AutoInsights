@@ -35,7 +35,7 @@ function display(cars) {
 		// card.classList.add('p-3')
 		card.classList.add('shadow-lg')
 		// Return the item at the random index
-		console.log(carImages[car.Make])
+		// console.log(carImages[car.Make])
 		const cardContent = `
 			<img src=${carImages[car.Make] || carImages['default']} class="card-img-top" alt="car" style="height: 161px; object-fit: cover;"/>
 			<div class="card-body">
@@ -43,11 +43,38 @@ function display(cars) {
 				<p class="card-text">${car.EngineSize * 1000} Cc, ${car.Horsepower} Bhp, ${car.MPG_City} KM/L</p>
 				<h6> $ ${car.MSRP.slice(0, -2)} </h6>
 				<p style="font-size: 12px; color: grey;">Ex-Showroom Price</p>
-				<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Know More</button>
+				<button class="btn btn-danger details-btn" data-bs-toggle="modal" data-bs-target="#detailsModal" data-car='${JSON.stringify(car)}'>Know More</button>
 			</div>
         `
+
 		card.innerHTML = cardContent
 
 		container.appendChild(card)
 	})
+
+	const detailsButtons = document.querySelectorAll('.details-btn')
+	console.log(detailsButtons)
+	detailsButtons.forEach((button) => {
+		button.addEventListener('click', function () {
+			const carData = JSON.parse(this.getAttribute('data-car'))
+			console.log(carData, "car")
+			populateModal(carData)
+		})
+	})
+}
+
+function populateModal(carData) {
+	const modalTitle = document.querySelector('.modal-title')
+	const modalBody = document.querySelector('.modal-body')
+
+	modalTitle.textContent = `${carData.Make} ${carData.Model}`
+	modalBody.innerHTML = `
+       
+        <p><strong>Engine Size: </strong>${carData.EngineSize * 1000} Cc</p>
+        <p><strong>Length: </strong>${carData.Length} m</p>
+        <p><strong>Wheelbase: </strong>${carData.Wheelbase} cm</p>
+        <p><strong>Horsepower: </strong>${carData.Horsepower} Bhp</p>
+        <p><strong>MPG(City): </strong>${carData.MPG_City} KM/L</p>
+        <p><strong>MSRP: </strong>$ ${carData.MSRP.slice(0, -2)}</p>
+    `
 }
