@@ -225,7 +225,6 @@ p {
 }
 
 
-
 @media (max-width: 1028px) {
 	#title {
 		text-align: center;
@@ -253,4 +252,10 @@ p {
 }
 th, td {
   padding: 15px;
+}
+
+.carousel-item img {
+	object-fit: cover;
+	width: 400px;
+	height: 253px;
 }
