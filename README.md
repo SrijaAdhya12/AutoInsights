@@ -14,7 +14,7 @@ Car suggesting website
 
 ## Preview
 
-![preview](https://github.com/warmachine028/AutoInsights/assets/75939390/3660c5a3-30e6-4064-b5b5-f7ca41b17cb0)
+![preview](https://github.com/warmachine028/AutoInsights/assets/75939390/3e3ee185-5cf7-4709-9ced-705a42d30960)
 
 ## Contributors
 

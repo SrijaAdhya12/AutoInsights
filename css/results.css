@@ -1,23 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-	--primary: #EEEEEE;
+	--primary: #eeeeee;
 	--primary-light: #425d81;
 	--secondary: #ff6c22;
 	--secondary-hover: #b55220;
 }
 
-
-body{
-    font-family: "Montserrat", sans-serif;
+body {
+	font-family: 'Montserrat', sans-serif;
 }
-
 
 .container-fluid {
 	padding: 3% 15%;
 }
-
 
 /*Navbar*/
 
@@ -36,7 +32,7 @@ body{
 	padding: 10px;
 }
 .navbar {
-	padding: 0 0 2.0rem;
+	padding: 0 0 2rem;
 }
 .nav-item {
 	padding: 0 18px;
@@ -71,29 +67,48 @@ body{
 }
 
 header {
-    background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 #hero {
-     background-color: var(--primary);
+	background-color: var(--primary);
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    margin: 100px 0 100px 0;
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	align-items: center;
+	margin: 100px 0 100px 0;
 	row-gap: 100px;
 }
 
-.card{
-	 /* box-shadow: 4px 4px 3px #80808047; */
-}
-
-.card:hover{
+.card:hover {
 	box-shadow: rgba(3, 3, 3, 0.658) 4px 1px 13px -1px;
 	transform: scale(1.2);
 	transition: 0.5s ease-in-out;
+	z-index: 999;
 }
 
+.mobile-header {
+	display: none;
+}
+
+@media only screen and (max-width: 1270px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.device-header {
+		display: none;
+	}
+	.mobile-header {
+		display: block;
+		margin: 0 40px;
+	}
+	.cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
